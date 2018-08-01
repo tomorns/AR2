@@ -1,0 +1,36 @@
+(S'beginning'
+p0
+S'Move J (home) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p1
+S'beginning'
+p2
+S'Move J (@) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-50 Ad 10 As 25 Dd 25 Ds 10'
+p3
+S'Move J (@) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p4
+S'beginning'
+p5
+S'Move J (home) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p6
+S'beginning'
+p7
+S'Move J (@) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p8
+S'Move J (home2) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p9
+S'beginning'
+p10
+S'beginning'
+p11
+S'beginning'
+p12
+S'beginning'
+p13
+S'beginning'
+p14
+S'beginning'
+p15
+S'Move J (home2) J1) 7525  J2) 4613  J3) 1  J4) 5800  J5) 2200  J6) 6750  Speed-10 Ad 10 As 25 Dd 25 Ds 10'
+p16
+tp17
+.

@@ -1,0 +1,46 @@
+(S'##BEGINNING OF PROGRAM##'
+p0
+S'Tab Number 1'
+p1
+S'Wait T - wait time - Seconds-.01'
+p2
+S'Wait T - wait time - Seconds-.01'
+p3
+S'Wait T - wait time - Seconds-.01'
+p4
+S'Wait T - wait time - Seconds-.01'
+p5
+S'Wait T - wait time - Seconds-.01'
+p6
+S'Wait T - wait time - Seconds-.01'
+p7
+S'Wait T - wait time - Seconds-.01'
+p8
+S'Wait T - wait time - Seconds-.01'
+p9
+S'Wait T - wait time - Seconds-.01'
+p10
+S'Wait T - wait time - Seconds-.01'
+p11
+S'Wait T - wait time - Seconds-.01'
+p12
+S'Wait T - wait time - Seconds-.01'
+p13
+S'Wait T - wait time - Seconds-.01'
+p14
+S'Wait T - wait time - Seconds-.01'
+p15
+S'Store Position 5 Element 6 = -122.469528497'
+p16
+S'Store Position 5 Element 5 = 179.467283217'
+p17
+S'Store Position 5 Element 4 = 34.2943300821'
+p18
+S'Store Position 5 Element 3 = 138.637088942'
+p19
+S'Store Position 5 Element 2 = 319.864186003'
+p20
+S'Store Position 5 Element 1 = 87.6798212268'
+p21
+tp22
+.

@@ -1,0 +1,162 @@
+(S'##BEGINNING OF PROGRAM##'
+p0
+S'##start position'
+p1
+S'Move J [*]  X) 50.369   Y) 282.175   Z) 188.789   W) 164.438   P) 179.94   R) 3.889   T) 40.0   Speed-40 Ad 15 As 10 Dd 20 Ds 5 $F'
+p2
+S'##reset counter for 6 dice'
+p3
+S'Register 1 = 1'
+p4
+S'##reset pickup stored position offset'
+p5
+S'Store Position 2 Element 1 = 0'
+p6
+S'Store Position 2 Element 2 = 0'
+p7
+S'Store Position 2 Element 3 = 0'
+p8
+S'Store Position 2 Element 4 = 0'
+p9
+S'Store Position 2 Element 5 = 0'
+p10
+S'Store Position 2 Element 6 = 0'
+p11
+S'##reset setdown stored position offset'
+p12
+S'Store Position 3 Element 1 = 0'
+p13
+S'Store Position 3 Element 2 = 0'
+p14
+S'Store Position 3 Element 3 = 0'
+p15
+S'Store Position 3 Element 4 = 0'
+p16
+S'Store Position 3 Element 5 = 0'
+p17
+S'Store Position 3 Element 6 = 0'
+p18
+S'##reset to first row'
+p19
+S'Register 2 = 1'
+p20
+S'##beginning main loop'
+p21
+S'Tab Number 1'
+p22
+S'##jump to end if done'
+p23
+S'If Register 1 = 7 Jump to Tab 999'
+p24
+S'##pickup dice'
+p25
+S'Out On - set output ON - Output-45'
+p26
+S'Store Position 2 Element 3 = 30'
+p27
+S'OFFS J [SP:2] [pick]  X) 230.878   Y) 436.677   Z) 43.098   W) -84.852   P) 178.14   R) -118.269   T) 40.0   Speed-40 Ad 15 As 10 Dd 20 Ds 5 $F'
+p28
+S'Store Position 2 Element 3 = 0'
+p29
+S'OFFS J [SP:2] [pick]  X) 230.878   Y) 436.677   Z) 43.098   W) -84.852   P) 178.14   R) -118.269   T) 40.0   Speed-10 Ad 15 As 10 Dd 20 Ds 5 $F'
+p30
+S'Out Off - set output OFF - Output-45'
+p31
+S'Wait T - wait time - Seconds-.3'
+p32
+S'Store Position 2 Element 3 = 30'
+p33
+S'OFFS J [SP:2] [pick]  X) 230.878   Y) 436.677   Z) 43.098   W) -84.852   P) 178.14   R) -118.269   T) 40.0   Speed-10 Ad 15 As 10 Dd 20 Ds 5 $F'
+p34
+S'Store Position 2 Element 2 = -17'
+p35
+S'Store Position 2 Element 6 = +2'
+p36
+S'##correct rot error'
+p37
+S'##SETDOWN DICE'
+p38
+S'##determine if 2nd row'
+p39
+S'If Register 1 = 4 Jump to Tab 2'
+p40
+S'Jump Tab-3'
+p41
+S'Tab Number 2'
+p42
+S'Register 2 = 2'
+p43
+S'Tab Number 3'
+p44
+S'##apply 2nd row offset'
+p45
+S'If Register 2 = 1 Jump to Tab 4'
+p46
+S'If Register 2 = 2 Jump to Tab 5'
+p47
+S'Tab Number 4'
+p48
+S'Store Position 3 Element 1 = 0'
+p49
+S'Jump Tab-6'
+p50
+S'Tab Number 5'
+p51
+S'Store Position 3 Element 1 = 50'
+p52
+S'##correct rot error'
+p53
+S'Store Position 3 Element 6 = 15'
+p54
+S'Jump Tab-6'
+p55
+S'Tab Number 6'
+p56
+S'##reset column count for 2nd row'
+p57
+S'If Register 1 = 4 Jump to Tab 7'
+p58
+S'Jump Tab-8'
+p59
+S'Tab Number 7'
+p60
+S'Store Position 3 Element 2 = 0'
+p61
+S'Tab Number 8'
+p62
+S'Store Position 3 Element 3 = 30'
+p63
+S'OFFS J [SP:3] [setdown]  X) 51.53   Y) 383.056   Z) 45.239   W) -84.62   P) 178.059   R) -159.154   T) 40.0   Speed-40 Ad 15 As 10 Dd 20 Ds 5 $F'
+p64
+S'Store Position 3 Element 3 = 0'
+p65
+S'OFFS J [SP:3] [setdown]  X) 51.53   Y) 383.056   Z) 45.239   W) -84.62   P) 178.059   R) -159.154   T) 40.0   Speed-10 Ad 15 As 10 Dd 20 Ds 5 $F'
+p66
+S'Out On - set output ON - Output-45'
+p67
+S'Wait T - wait time - Seconds-.3'
+p68
+S'Store Position 3 Element 3 = 30'
+p69
+S'OFFS J [SP:3] [setdown]  X) 51.53   Y) 383.056   Z) 45.239   W) -84.62   P) 178.059   R) -159.154   T) 40.0   Speed-10 Ad 15 As 10 Dd 20 Ds 5 $F'
+p70
+S'Store Position 3 Element 2 = +50'
+p71
+S'Move J [*]  X) 100.118   Y) 402.306   Z) 148.922   W) -85.729   P) 179.573   R) 123.452   T) 40.0   Speed-40 Ad 15 As 10 Dd 20 Ds 5 $F'
+p72
+S'##increment dice count'
+p73
+S'Register 1 = +1'
+p74
+S'##jump to start of loop'
+p75
+S'Jump Tab-1'
+p76
+S'##END OF PROGRAM'
+p77
+S'Tab Number 999'
+p78
+S'Call Program - home'
+p79
+tp80
+.

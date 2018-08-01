@@ -1,0 +1,12 @@
+(S'##BEGINNING OF PROGRAM##'
+p0
+S'Tab Number 1'
+p1
+S'Move J [*]  X) 468.691   Y) -10.285   Z) 179.292   W) 61.518  P) 177.108   R) 59.558   T) 30.0   Speed-100 Ad 20 As 25 Dd 25 Ds 20 $F'
+p2
+S'Move J [*]  X) 291.622   Y) -0.311   Z) 182.256   W) 95.643  P) 169.36   R) 89.568   T) 30.0   Speed-100 Ad 20 As 25 Dd 25 Ds 20 $F'
+p3
+S'Move J [*]  X) 479.923   Y) 17.488   Z) 192.318   W) 131.119   P) 134.884   R) 134.523   T) 30.0   Speed-100 Ad 20 As 25 Dd 25 Ds 20 $F'
+p4
+tp5
+.

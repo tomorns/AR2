@@ -1,0 +1,10 @@
+(S'##BEGINNING OF PROGRAM##'
+p0
+S'foo'
+p1
+S'foo'
+p2
+S'Return'
+p3
+tp4
+.

@@ -1,0 +1,22 @@
+(S'##BEGINNING OF PROGRAM##'
+p0
+S'Tab Number 1'
+p1
+S'Move J [*]  X) 87.071   Y) 323.188   Z) 338.691   W) -26.164   P) 174.305   R) 175.166   T) 20.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p2
+S'Move J [*]  X) 87.957   Y) -383.239   Z) -0.75   W) -164.819   P) 174.554   R) -11.348   T) 400.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p3
+S'Move J [*]  X) 87.674   Y) 319.84   Z) 138.637   W) 37.431   P) 179.495   R) -119.333   T) 20.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p4
+S'Move J [*]  X) 87.674   Y) 319.84   Z) 138.637   W) 37.431   P) 179.495   R) -119.333   T) 400.0   Speed-80 Ad 15 As 10 Dd 20 Ds 5 $F'
+p5
+S'Move J [*]  X) -30.815   Y) -480.134   Z) -0.843   W) 158.478   P) 179.606   R) -11.582   T) 400.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p6
+S'Move J [*]  X) -20.99   Y) -259.737   Z) 166.788   W) 172.758   P) 174.7   R) 4.638   T) 400.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p7
+S'Move J [*]  X) -23.73   Y) 256.355   Z) 166.634   W) 19.285   P) 179.66   R) 176.305   T) 20.0   Speed-90 Ad 15 As 10 Dd 20 Ds 5 $F'
+p8
+S'Jump Tab-1'
+p9
+tp10
+.
