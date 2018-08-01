@@ -675,6 +675,22 @@ void loop() {
         }
         else
         {
+          
+          // for debug the limit switch
+          Serial.println("J1pass=");
+          Serial.println(J1pass, DEC);
+          Serial.print("J2pass=");
+          Serial.println(J2pass);
+          Serial.print("J3pass=");
+          Serial.println(J3pass);
+          Serial.print("J4pass=");
+          Serial.println(J4pass);
+          Serial.print("J5pass=");
+          Serial.println(J5pass);
+          Serial.print("J6pass=");
+          Serial.println(J6pass);
+          // for debug the limit switch
+          
           Serial.println("fail\n");
         }
         inData = ""; // Clear recieved buffer
