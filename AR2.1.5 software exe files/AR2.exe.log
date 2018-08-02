@@ -2,3 +2,208 @@ Traceback (most recent call last):
   File "AR2.py", line 77, in <module>
   File "Tkinter.pyo", line 1693, in wm_iconbitmap
 _tkinter.TclError: bitmap "AR2.ico" not defined
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(5, 'Access is denied.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 811, in calRobotJ1
+  File "serial\serialwin32.pyo", line 314, in write
+SerialException: WriteFile failed (WindowsError(22, 'The device does not recognize the command.'))
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 804, in calRobotJ1
+  File "AR2.py", line 957, in calRobot
+  File "serial\serialwin32.pyo", line 314, in write
+SerialException: WriteFile failed (WindowsError(22, 'The device does not recognize the command.'))
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(2, 'The system cannot find the file specified.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(2, 'The system cannot find the file specified.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(2, 'The system cannot find the file specified.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM4': WindowsError(2, 'The system cannot find the file specified.')
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "Tkinter.pyo", line 1536, in __call__
+  File "AR2.py", line 225, in setCom
+  File "serial\serialwin32.pyo", line 31, in __init__
+  File "serial\serialutil.pyo", line 182, in __init__
+  File "serial\serialwin32.pyo", line 62, in open
+SerialException: could not open port 'COM6': WindowsError(5, 'Access is denied.')

@@ -166,7 +166,8 @@ void setup() {
   pinMode(J4calPin, INPUT);
   pinMode(J5calPin, INPUT);
   pinMode(J6calPin, INPUT);
-
+  
+/* unuse input disable :: all input must go somewhere in digital
   pinMode(Input22, INPUT);
   pinMode(Input23, INPUT);
   pinMode(Input24, INPUT);
@@ -183,6 +184,7 @@ void setup() {
   pinMode(Input35, INPUT);
   pinMode(Input36, INPUT);
   pinMode(Input37, INPUT);
+*/
 
   pinMode(Output38, OUTPUT);
   pinMode(Output39, OUTPUT);
@@ -376,7 +378,7 @@ void loop() {
       //-----------------------------------------------------------------------
       if (function == "LL")
       {
-        int J1start = inData.indexOf('A');
+         int J1start = inData.indexOf('A');
         int J2start = inData.indexOf('B');
         int J3start = inData.indexOf('C');
         int J4start = inData.indexOf('D');
@@ -671,27 +673,43 @@ void loop() {
         }
         if ((J1pass + J2pass + J3pass + J4pass + J5pass + J6pass) == 6)
         {
-          Serial.println("pass\n");
+          Serial.print("pass\n");          
+          // for debug the limit switch in the serial monitor
+          Serial.print(" J1pass=");
+          Serial.print(J1pass);
+          Serial.print(" J2pass=");
+          Serial.print(J2pass);
+          Serial.print(" J3pass=");
+          Serial.print(J3pass);
+          Serial.print(" J4pass=");
+          Serial.print(J4pass);
+          Serial.print(" J5pass=");
+          Serial.print(J5pass);
+          Serial.print(" J6pass=");
+          Serial.println(J6pass);
+          // for debug the limit switch in the serial monitor
+
+
         }
         else
         {
-          
-          // for debug the limit switch
-          Serial.println("J1pass=");
-          Serial.println(J1pass, DEC);
-          Serial.print("J2pass=");
-          Serial.println(J2pass);
-          Serial.print("J3pass=");
-          Serial.println(J3pass);
-          Serial.print("J4pass=");
-          Serial.println(J4pass);
-          Serial.print("J5pass=");
-          Serial.println(J5pass);
-          Serial.print("J6pass=");
-          Serial.println(J6pass);
-          // for debug the limit switch
-          
           Serial.println("fail\n");
+          // for debug the limit switch in the serial monitor
+          Serial.print(" J1pass=");
+          Serial.print(J1pass);
+          Serial.print(" J2pass=");
+          Serial.print(J2pass);
+          Serial.print(" J3pass=");
+          Serial.print(J3pass);
+          Serial.print(" J4pass=");
+          Serial.print(J4pass);
+          Serial.print(" J5pass=");
+          Serial.print(J5pass);
+          Serial.print(" J6pass=");
+          Serial.println(J6pass);
+          // for debug the limit switch in the serial monitor
+          
+
         }
         inData = ""; // Clear recieved buffer
       }

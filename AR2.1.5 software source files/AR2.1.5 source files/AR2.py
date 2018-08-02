@@ -71,7 +71,6 @@ import tkMessageBox
 import webbrowser
 
 
-
 root = Tk()
 root.wm_title("AR2 software 1.5")
 root.iconbitmap(r'AR2.ico')
@@ -97,6 +96,9 @@ nb.add(tab4, text='   Registers    ')
 
 tab5 = ttk.Frame(nb)
 nb.add(tab5, text='   Vision    ')
+## monitoring ##
+tab6 = ttk.Frame(nb)
+nb.add(tab6, text='   Monitoring   ')
 
 global J1NegAngLim
 global J1PosAngLim
@@ -218,11 +220,12 @@ JogStepsStat = IntVar()
 ##########################################################################
 
 
-def setCom():
+def setCom(): 
   global ser  
   port = "COM" + comPortEntryField.get()  
   baud = 9600 
   ser = serial.Serial(port, baud)
+  print("setCom")
 
 def deleteitem():
   selRow = tab1.progView.curselection()[0]
@@ -285,6 +288,7 @@ def executeRow():
     servoPos = str(command[posIndex+10:])
     command = "SV"+servoNum+"P"+servoPos
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -296,9 +300,11 @@ def executeRow():
     tabNum = str(command[tabIndex+4:])
     command = "JFX"+inputNum+"T"+tabNum   
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     value = ser.readline()
+    print(value)
     #value = str(value[3:])
     if (value == "True\n"):
       index = tab1.progView.get(0, "end").index("Tab Number " + tabNum)
@@ -313,9 +319,11 @@ def executeRow():
     tabNum = str(command[tabIndex+4:])
     command = "JFX"+inputNum+"T"+tabNum   
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     value = ser.readline()
+    print(value)
     if (value == "False\n"):
       index = tab1.progView.get(0, "end").index("Tab Number " + tabNum)
       index = index-1
@@ -334,6 +342,7 @@ def executeRow():
     outputNum = str(command[outputIndex+7:])
     command = "ONX"+outputNum
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -343,6 +352,7 @@ def executeRow():
     outputNum = str(command[outputIndex+7:])
     command = "OFX"+outputNum
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -352,6 +362,7 @@ def executeRow():
     inputNum = str(command[inputIndex+6:])
     command = "WIN"+inputNum
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -361,6 +372,7 @@ def executeRow():
     inputNum = str(command[inputIndex+6:])
     command = "WON"+inputNum
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -370,6 +382,7 @@ def executeRow():
     timeSeconds = str(command[timeIndex+8:])
     command = "WTS"+timeSeconds
     ser.write(command +"\n")
+    print(command)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -793,6 +806,7 @@ def calRobotAll():
     J6caldrive = "0"        
   command = "MJA"+J1caldrive+"500"+"B"+J2caldrive+"500"+"C"+J3caldrive+"500"+"D"+J4caldrive+"500"+"E"+J5caldrive+"500"+"F"+J6caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -809,6 +823,7 @@ def calRobotJ1():
     J1caldrive = "0"            
   command = "MJA"+J1caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -825,6 +840,7 @@ def calRobotJ2():
     J2caldrive = "0"     
   command = "MJB"+J2caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -841,6 +857,7 @@ def calRobotJ3():
     J3caldrive = "0"        
   command = "MJC"+J3caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -857,6 +874,7 @@ def calRobotJ4():
     J4caldrive = "0" 	   
   command = "MJD"+J4caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -873,6 +891,7 @@ def calRobotJ5():
     J5caldrive = "0" 	       
   command = "MJE"+J5caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -889,6 +908,7 @@ def calRobotJ6():
     J6caldrive = "0"        
   command = "MJF"+J6caldrive+"500"+"S15G10H10I10K10"
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   speed = "8"
   time.sleep(2.5)
@@ -955,8 +975,16 @@ def calRobot(calaxis,speed):
     J6caldrive = "1"    
   command = "LL"+"A"+J1caldrive+J1step+"B"+J2caldrive+J2step+"C"+J3caldrive+J3step+"D"+J4caldrive+J4step+"E"+J5caldrive+J5step+"F"+J6caldrive+J6step+"S"+str(speed)  
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
+
+  ''' ## For Monitor Limit Switches ###
+  CalValueMonitor = ser.readline()
+  print(CalValueMonitor)
+  ''' ## For Monitor Limit Switches ###
+
   calvalue = ser.readline()
+  print(calvalue)
   global calStat
   if (calvalue == "pass\n"):
     calStat = 1
@@ -1454,7 +1482,8 @@ def J1jogNeg():
     J1jogSteps = J1Degs
     J1Degs = J1Degs*J1DegPerStep
   if (J1Degs <= -(J1NegAngLim - J1AngCur)):
-    ser.write("MJA"+J1motdir+str(J1jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    ser.write("MJA"+J1motdir+str(J1jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")
+    print("MJA"+J1motdir+str(J1jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")        
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1496,6 +1525,7 @@ def J1jogPos():
     J1drivedir = "0"	
   if (J1Degs <= (J1PosAngLim - J1AngCur)):
     ser.write("MJA"+J1drivedir+str(J1jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJA"+J1drivedir+str(J1jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1529,6 +1559,7 @@ def J2jogNeg():
     J2Degs = J2Degs*J2DegPerStep
   if (J2Degs <= -(J2NegAngLim - J2AngCur)):
     ser.write("MJB"+J2motdir+str(J2jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJB"+J2motdir+str(J2jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1570,6 +1601,7 @@ def J2jogPos():
     J2drivedir = "0"	
   if (J2Degs <= (J2PosAngLim - J2AngCur)):
     ser.write("MJB"+J2drivedir+str(J2jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJB"+J2drivedir+str(J2jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1603,6 +1635,7 @@ def J3jogNeg():
     J3Degs = J3Degs*J3DegPerStep
   if (J3Degs <= -(J3NegAngLim - J3AngCur)):
     ser.write("MJC"+J3motdir+str(J3jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJC"+J3motdir+str(J3jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1644,6 +1677,7 @@ def J3jogPos():
     J3drivedir = "0"	
   if (J3Degs <= (J3PosAngLim - J3AngCur)):
     ser.write("MJC"+J3drivedir+str(J3jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJC"+J3drivedir+str(J3jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1677,6 +1711,7 @@ def J4jogNeg():
     J4Degs = J4Degs*J4DegPerStep
   if (J4Degs <= -(J4NegAngLim - J4AngCur)):
     ser.write("MJD"+J4motdir+str(J4jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJD"+J4motdir+str(J4jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1718,6 +1753,7 @@ def J4jogPos():
     J4drivedir = "0"	
   if (J4Degs <= (J4PosAngLim - J4AngCur)):
     ser.write("MJD"+J4drivedir+str(J4jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJD"+J4drivedir+str(J4jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1752,6 +1788,7 @@ def J5jogNeg():
     J5Degs = J5Degs*J5DegPerStep
   if (J5Degs <= -(J5NegAngLim - J5AngCur)):
     ser.write("MJE"+J5motdir+str(J5jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJE"+J5motdir+str(J5jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1793,6 +1830,7 @@ def J5jogPos():
     J5drivedir = "0"	
   if (J5Degs <= (J5PosAngLim - J5AngCur)):
     ser.write("MJE"+J5drivedir+str(J5jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJE"+J5drivedir+str(J5jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1826,6 +1864,7 @@ def J6jogNeg():
     J6Degs = J6Degs*J6DegPerStep
   if (J6Degs <= -(J6NegAngLim - J6AngCur)):
     ser.write("MJF"+J6motdir+str(J6jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJF"+J6motdir+str(J6jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -1867,6 +1906,7 @@ def J6jogPos():
     J6drivedir = "0"	
   if (J6Degs <= (J6PosAngLim - J6AngCur)):
     ser.write("MJF"+J6drivedir+str(J6jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJF"+J6drivedir+str(J6jogSteps)+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  
@@ -2181,6 +2221,7 @@ def TrackjogNeg():
     TrackSteps = str(int((TrackStepLim/TrackLength)*CT))
   if (TrackcurPos - (float(TrackSteps) * (TrackLength/TrackStepLim)) >= 0):
     ser.write("MJT0"+TrackSteps+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJT0"+TrackSteps+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()  	
@@ -2209,6 +2250,7 @@ def TrackjogPos():
     TrackSteps = str(int((TrackStepLim/TrackLength)*CT))
   if (TrackcurPos + (float(TrackSteps) * (TrackLength/TrackStepLim)) <= TrackLength):
     ser.write("MJT1"+TrackSteps+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
+    print("MJT1"+TrackSteps+"S"+Speed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd+"\n")    
     ser.flushInput()
     time.sleep(.2)
     ser.read()
@@ -2942,6 +2984,7 @@ def Servo0on():
   servoPos = servo0onEntryField.get()
   command = "SV0P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -2952,6 +2995,7 @@ def Servo0off():
   servoPos = servo0offEntryField.get()
   command = "SV0P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -2962,6 +3006,7 @@ def Servo1on():
   servoPos = servo1onEntryField.get()
   command = "SV1P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -2972,6 +3017,7 @@ def Servo1off():
   servoPos = servo1offEntryField.get()
   command = "SV1P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -2982,6 +3028,7 @@ def Servo2on():
   servoPos = servo2onEntryField.get()
   command = "SV2P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -2992,6 +3039,7 @@ def Servo2off():
   servoPos = servo2offEntryField.get()
   command = "SV2P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -3001,6 +3049,7 @@ def Servo3on():
   servoPos = servo3onEntryField.get()
   command = "SV3P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3011,6 +3060,7 @@ def Servo3off():
   servoPos = servo3offEntryField.get()
   command = "SV3P"+servoPos
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -3022,6 +3072,7 @@ def DO1on():
   outputNum = DO1onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3031,6 +3082,7 @@ def DO1off():
   outputNum = DO1offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3040,6 +3092,7 @@ def DO2on():
   outputNum = DO2onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -3049,6 +3102,7 @@ def DO2off():
   outputNum = DO2offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3058,6 +3112,7 @@ def DO3on():
   outputNum = DO3onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3067,6 +3122,7 @@ def DO3off():
   outputNum = DO3offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3076,6 +3132,7 @@ def DO4on():
   outputNum = DO4onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -3085,6 +3142,7 @@ def DO4off():
   outputNum = DO4offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3094,6 +3152,7 @@ def DO5on():
   outputNum = DO5onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3103,6 +3162,7 @@ def DO5off():
   outputNum = DO5offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -3112,6 +3172,7 @@ def DO6on():
   outputNum = DO6onEntryField.get()
   command = "ONX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read()
@@ -3121,6 +3182,7 @@ def DO6off():
   outputNum = DO6offEntryField.get()
   command = "OFX"+outputNum
   ser.write(command +"\n")
+  print(command)
   ser.flushInput()
   time.sleep(.2)
   ser.read() 
@@ -4086,6 +4148,7 @@ def MoveNew(J1out,J2out,J3out,J4out,J5out,J6out,newSpeed,ACCdur,ACCspd,DECdur,DE
     TrackcurEntryField.insert(0,str(TrackcurPos))	
     commandCalc = "MJA"+J1dir+J1steps+"B"+J2dir+J2steps+"C"+J3dir+J3steps+"D"+J4dir+J4steps+"E"+J5dir+J5steps+"F"+J6dir+J6steps+"T"+TRdir+TRstep+"S"+newSpeed+"G"+ACCdur+"H"+ACCspd+"I"+DECdur+"K"+DECspd
     ser.write(commandCalc +"\n")
+    print(commandCalc)
     ser.flushInput()
     time.sleep(.2)
     ser.read() 
@@ -5355,7 +5418,7 @@ gotofineCalBut.place(x=170, y=70)
 
 saveCalBut = Button(tab2, bg="grey85", text="SAVE CALIBRATION DATA", height=1, width=26, command = SaveAndApplyCalibration)
 saveCalBut.place(x=1150, y=630)
-
+  
 
 CalJ1But = Button(tab2,  bg="grey85", text="Calibrate J1 Only", height=1, width=20, command = calRobotJ1)
 CalJ1But.place(x=10, y=140)
@@ -6762,6 +6825,7 @@ except:
   print ""
 
 loadProg()
+
 msg = "AR2 SOFTWARE AND MODELS ARE FREE:\n\
 \n\
 *for personal use.\n\
@@ -6778,9 +6842,9 @@ OF ROBOT OR SOFTWARE BASED ON THE \n\
 AR2 ROBOT DESIGN FOR PROFIT.\n\
 \n\
 Copyright (c) 2017, Chris Annin"
-
+'''
 tkMessageBox.showwarning("AR2 License / Copyright notice", msg)
-
+'''
 tab1.mainloop()
 
 
